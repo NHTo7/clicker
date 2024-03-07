@@ -1,7 +1,13 @@
-body { 
-    font-size: 30px;
-    text-align: center;
-  }
+body {
+
+  font-size: 30px;
+  text-align: center;
+  border: solid black;
+  background-color: rgb(80, 69, 69);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 
@@ -10,19 +16,18 @@ body {
   height: 200px;
   border: solid gray 8px;
   line-height: 2.5;
-  padding: 0 20px;
+  padding: 20px;
+  padding-top: 20px;
   font-size: 1rem;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   border-radius: 100px;
   background-color: rgb(220 0 0 / 100%);
-  background-image: linear-gradient(
-    to top left,
-    rgb(0 0 0 / 20%),
-    rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
-  );
+  background-image: linear-gradient(to top left,
+      rgb(0 0 0 / 20%),
+      rgb(0 0 0 / 20%) 30%,
+      rgb(0 0 0 / 0%));
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 60%),
     inset -2px -2px 3px rgb(0 0 0 / 60%);
@@ -39,9 +44,18 @@ body {
 }
 
 #score {
-    font-size: 50px;
-    text-shadow: 2px 2px 2px #000;}
-
-#upgrade_1{
-    font-size: 100px;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px #000;
+  color: #fff;
 }
+
+#upgrade_1 {}
+
+.upgrade {
+  font-size: 50px;
+  border-width: 1px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
