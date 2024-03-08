@@ -16,7 +16,6 @@ else {
 
 document.getElementById('button').onclick = () => {
     counter += clickPoints;
-    update()
 };
 
 document.getElementById('upgrade_1').onclick = () => {
@@ -24,7 +23,6 @@ document.getElementById('upgrade_1').onclick = () => {
         counter -= upgrade_1
         clickPoints += 1
         upgrade_1 *= 1.2
-        update()
     }
 
 };
@@ -33,15 +31,27 @@ document.getElementById('upgrade_2').onclick = () => {
     if (counter >= upgrade_2) {
         counter -= upgrade_2;
         upgrade_2 *= 1.5; // Increase the cost of upgrade 2 each time it's purchased
-        autoClickerInterval += 1
-        update();
+        autoClickerInterval += 1;
     }
 };
 
 function update() {
     document.getElementById('upgrade_1').innerText = '+ $1 per click - Cost: $' + Math.round(upgrade_1);
-    document.getElementById('upgrade_2').innerText = 'Upgrade Level 2 - Cost: $' + Math.round(upgrade_2);
+    document.getElementById('upgrade_2').innerText = '+$1 per second - Cost: $' + Math.round(upgrade_2);
     document.getElementById('score').innerText = '$' + Math.round(counter);
+    if (counter >= upgrade_1) {
+        document.getElementById('upgrade_1').style.borderColor = 'green';
+    }
+    else{
+        document.getElementById('upgrade_1').style.borderColor = 'red';
+    }
+
+    if (counter >= upgrade_2) {
+        document.getElementById('upgrade_2').style.borderColor = 'green';
+    }
+    else{
+        document.getElementById('upgrade_2').style.borderColor = 'red';
+    }
     save_data();
 }
 
@@ -54,7 +64,7 @@ function save_data() {
 }
 
 function tick() {
-    counter += autoClickerInterval
+    counter += autoClickerInterval /10
     update()
 }
 
@@ -63,6 +73,6 @@ document.getElementById("restartButton").onclick = () => {
     location.reload();
 }
 
-setInterval(tick, 1000);
+setInterval(tick, 100);
 
 update()

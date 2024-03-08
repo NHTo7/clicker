@@ -2,7 +2,6 @@ body {
 
   font-size: 30px;
   text-align: center;
-  border: solid black;
   background-color: rgb(80, 69, 69);
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -12,6 +11,7 @@ body {
 
 
 .styled {
+  margin-top: 100px;
   width: 200px;
   height: 200px;
   border: solid gray 8px;
@@ -53,9 +53,11 @@ body {
 
 .upgrade {
   font-size: 50px;
-  border-width: 1px;
+  border-radius: 7px;
+  border-width: 5px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: none;
 }
 
