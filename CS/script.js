@@ -30,7 +30,7 @@ document.getElementById('upgrade_1').onclick = () => {
 document.getElementById('upgrade_2').onclick = () => {
     if (counter >= upgrade_2) {
         counter -= upgrade_2;
-        upgrade_2 *= 1.5; // Increase the cost of upgrade 2 each time it's purchased
+        upgrade_2 *= 1.2;
         autoClickerInterval += 1;
     }
 };
